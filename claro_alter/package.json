@@ -1,0 +1,39 @@
+{
+  "name": "claro_alter",
+  "version": "0.1.0",
+  "description": "DesignHammer Admin Theme Enhancements",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/repo.git"
+  },
+  "author": "DesignHammer, LLC",
+  "license": "GPL-2.0 AND MIT",
+  "homepage": "https://designhammer.com",
+  "scripts": {
+    "styles": "gulp styles",
+    "scripts": "gulp scripts",
+    "watch": "gulp watch"
+  },
+  "browserslist": [
+    "> 0.2%",
+    "last 2 version",
+    "Firefox ESR",
+    "not dead"
+  ],
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "browser-sync": "^2.28.3",
+    "gulp": "^4.0.2",
+    "gulp-postcss": "^9.0.1",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
+    "postcss": "^8.4.21",
+    "sass": "^1.59.3",
+    "standard": "^17.0.0",
+    "stylelint": "^15.2.0",
+    "stylelint-config-standard": "^30.0.1",
+    "stylelint-config-standard-scss": "^7.0.1",
+    "stylelint-order": "^6.0.3"
+  }
+}

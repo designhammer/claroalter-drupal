@@ -1,0 +1,5 @@
+*.DS_Store
+claroalter-drupal.code-workspace
+
+!claro_alter/.eslintrc.json
+claro_alter/node_modules

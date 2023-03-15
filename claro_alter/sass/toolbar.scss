@@ -1,0 +1,173 @@
+.toolbar,
+.toolbar ul {
+  font-size: 13px !important;
+  font-family: "Source Sans Pro", "Lucida Grande", Verdana, sans-serif !important;
+}
+
+.toolbar-tray {
+
+  a,
+  a:visited {
+    color: #565656 !important;
+  }
+}
+
+.toolbar .toolbar-tray-horizontal,
+[dir="rtl"] .toolbar .toolbar-tray-horizontal {
+
+  .menu-item a:focus,
+  .menu-item--expanded {
+    background-color: #fff !important;
+  }
+
+  ul li li.menu-item {
+    border-right-color: #fff !important;
+    border-bottom-color: #eee !important;
+    border-left-color: #fff !important;
+
+    &:first-child {
+      border-top-color: #fff !important;
+    }
+  }
+
+
+  ul li.menu-item--expanded.hover-intent ul {
+    box-shadow: 0 0 0 1px rgb(0 0 0 / 5%), 0 2px 7px 3px rgb(0 0 0 / 10%);
+  }
+
+  .menu-item:last-child {
+    border-right-color: #fff !important;
+    border-left-color: #fff !important;
+  }
+}
+
+.toolbar-horizontal .toolbar-tray {
+  border-bottom-color: #ccc !important;
+  box-shadow: 0 0 3px 1px rgb(0 0 0 / 7.5%) !important;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+.toolbar .toolbar-tray-vertical .menu-item + .menu-item {
+  border-top-color: #eee !important;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+.toolbar-horizontal .toolbar-tray .menu-item + .menu-item {
+  border-left-color: #eee !important;
+}
+
+.toolbar .toolbar-icon {
+
+  &::before {
+    width: 18px !important;
+  }
+}
+
+.toolbar .toolbar-icon-escape-admin {
+
+  &::before {
+    opacity: 0.65;
+  }
+}
+
+.toolbar-bar .toolbar-icon-menu {
+
+  &::before {
+    opacity: 0.65;
+  }
+
+  &:active::before,
+  &.is-active::before {
+    opacity: 1;
+  }
+}
+
+.toolbar-bar .toolbar-icon-shortcut {
+
+  &::before {
+    opacity: 0.65;
+  }
+
+  &:active::before,
+  &.is-active::before {
+    opacity: 1;
+  }
+}
+
+.toolbar-bar .toolbar-icon-user {
+
+  &::before {
+    opacity: 0.65;
+  }
+
+  &:active::before,
+  &.is-active::before {
+    opacity: 1;
+  }
+}
+
+.toolbar-bar .toolbar-icon-environment {
+
+  &::before {
+    opacity: 0.65;
+  }
+
+  &:active::before,
+  &.is-active::before {
+    opacity: 1;
+  }
+}
+
+.toolbar .toolbar-bar .toolbar-icon-devel {
+
+  &::before {
+    opacity: 0.65;
+  }
+
+  &:active::before,
+  &.is-active::before {
+    opacity: 1;
+  }
+}
+
+.toolbar-bar .toolbar-icon-edit {
+
+  &::before {
+    opacity: 0.65;
+  }
+
+  &:active::before,
+  &.is-active::before {
+    opacity: 1;
+  }
+}
+
+.toolbar-bar .toolbar-icon-help {
+
+  &::before {
+    opacity: 0.65;
+  }
+
+  &:active::before,
+  &.is-active::before {
+    opacity: 1;
+  }
+}
+
+.toolbar .toolbar-bar .toolbar-tab > .toolbar-item.is-active {
+  background-image: linear-gradient(rgb(255 255 255 / 10%) 20%, rgb(255 255 255 / 10%) 200%) !important;
+}
+
+#admin-toolbar-search-input {
+  color: #fff !important;
+  border: 1px solid rgb(0 0 0 / 10%) !important;
+  border-radius: 3px;
+  background-color: rgb(0 0 0 / 10%) !important;
+  box-shadow: 0 1px 0 0 rgb(256 256 256 / 7.5%);
+  height: 26px;
+  min-height: 26px;
+
+  &::placeholder {
+    color: rgb(256 256 256 / 50%);
+  }
+}

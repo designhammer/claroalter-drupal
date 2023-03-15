@@ -1,0 +1,8 @@
+{
+  "extends": "standard",
+  "env": {
+    "browser": true,
+    "es2020": true
+  },
+  "root": true
+}
