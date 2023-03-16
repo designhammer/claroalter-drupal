@@ -4,6 +4,7 @@
     "stylelint-order"
   ],
   "rules": {
+    "color-function-notation": "legacy",
     "color-hex-length": null,
     "declaration-block-no-duplicate-properties": true,
     "declaration-colon-space-after": "always-single-line",
