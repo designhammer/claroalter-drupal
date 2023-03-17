@@ -50,8 +50,10 @@
   border-left-color: #eee !important;
 }
 
-.toolbar .toolbar-icon::before {
-  width: 18px !important;
+@media (min-width: 769px) {
+  .toolbar .toolbar-icon::before {
+    width: 18px !important;
+  }
 }
 
 .toolbar .toolbar-icon-escape-admin::before {
