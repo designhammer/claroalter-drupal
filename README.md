@@ -1,6 +1,6 @@
 # Claro Alter - Theme
 
-<img src="claro_alter/screenshot.png" width="335" height="250">
+<img src="claroalter/screenshot.png" width="335" height="250">
 
 Claro Alter provides enhancements to the core Claro admin theme.
 
@@ -22,7 +22,7 @@ global-styling:
   version: VERSION
   css:
     theme:
-      https://cdn.jsdelivr.net/gh/designhammer/claroalter-drupal@0.0.1/claro_alter/css/style.css: { type: external, crossorigin: anonymous, minified: true }
-      https://cdn.jsdelivr.net/gh/designhammer/claroalter-drupal@0.0.1/claro_alter/css/toolbar.css: { type: external, crossorigin: anonymous, minified: true }
+      https://cdn.jsdelivr.net/gh/designhammer/claroalter-drupal/claro_alter/css/style.css: { type: external, crossorigin: anonymous, minified: true }
+      https://cdn.jsdelivr.net/gh/designhammer/claroalter-drupal/claro_alter/css/toolbar.css: { type: external, crossorigin: anonymous, minified: true }
 
 ```
