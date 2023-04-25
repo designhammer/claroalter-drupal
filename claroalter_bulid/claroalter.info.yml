@@ -6,7 +6,7 @@ core_version_requirement: ^9 || ^10
 
 libraries:
   - claro/global-styling
-  - claro_alter/global-styling
+  - claroalter/global-styling
 
 # Regions
 regions:
@@ -16,6 +16,7 @@ regions:
   highlighted: Highlighted
   help: Help
   content: Content
+  content_bottom: 'Content bottom'
   page_top: 'Page top'
   page_bottom: 'Page bottom'
   sidebar_first: 'First sidebar'

@@ -1,9 +1,0 @@
-# Schema for the configuration files of the Claro Alter theme.
-
-claro_alter.settings:
-  type: theme_settings
-  label: 'claro alter settings'
-  mapping:
-    base_primary_color:
-      type: color_hex
-      label: 'Base Primary Color'

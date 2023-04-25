@@ -12,7 +12,7 @@ use Drupal\Core\Template\Attribute;
  *
  * Adds body classes if certain regions have content.
  */
-function claro_alter_preprocess_html(&$variables) {
+function claroalter_preprocess_html(&$variables) {
 
     // Apply custom primary highlight color var to HTML tag.
     $highlight_color_hex = theme_get_setting('color') ?? '#003ecc';

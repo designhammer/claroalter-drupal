@@ -10,20 +10,20 @@ use Drupal\Core\Form\FormStateInterface;
 /**
  * Implements hook_form_FORM_ID_alter() for system_theme_settings.
  */
-function claro_alter_form_system_theme_settings_alter(&$form, FormStateInterface $form_state) {
+function claroalter_form_system_theme_settings_alter(&$form, FormStateInterface $form_state) {
 
-  $form['claro_alter_settings']['claro_alter_color_scheme'] = [
+  $form['claroalter_settings']['claroalter_color_scheme'] = [
     '#type' => 'fieldset',
     '#title' => t('Primary Highlight Color Settings'),
   ];
 
-  $form['claro_alter_settings']['claro_alter_color_scheme']['description'] = [
+  $form['claroalter_settings']['claroalter_color_scheme']['description'] = [
     '#type' => 'html_tag',
     '#tag' => 'p',
     '#value' => t('These settings adjust the primamry highlight color for the Claro Alter theme.'),
   ];
 
-  $form['claro_alter_settings']['claro_alter_color_scheme']['color'] = [
+  $form['claroalter_settings']['claroalter_color_scheme']['color'] = [
     '#type' => 'textfield',
     '#maxlength' => 7,
     '#size' => 10,
