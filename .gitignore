@@ -1,5 +1,3 @@
 *.DS_Store
 claroalter-drupal.code-workspace
-
-# !claroalter_build/.eslintrc.json
-claroalter_build/node_modules
+claroalter_bulid/node_modules

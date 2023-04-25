@@ -1,0 +1,25 @@
+name: Claro Alter
+type: theme
+base theme: claro
+description: 'DesignHammer Admin Theme Enhancements'
+core_version_requirement: ^9 || ^10
+
+libraries:
+  - claro/global-styling
+# - claroalter/global-styling
+  - claroalter/claroalter-styling
+
+# Regions
+regions:
+  header: 'Header'
+  pre_content: 'Pre-content'
+  breadcrumb: Breadcrumb
+  highlighted: Highlighted
+  help: Help
+  content: Content
+  content_bottom: 'Content bottom'
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+  sidebar_first: 'First sidebar'
+regions_hidden:
+  - sidebar_first

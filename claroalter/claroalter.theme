@@ -1,0 +1,20 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the Olivero theme.
+ */
+
+use Drupal\Core\Template\Attribute;
+
+ /**
+ * Implements hook_preprocess_HOOK() for HTML document templates.
+ *
+ * Adds body classes if certain regions have content.
+ */
+function claroalter_preprocess_html(&$variables) {
+
+    // Apply custom primary highlight color var to HTML tag.
+    $highlight_color_hex = theme_get_setting('color') ?? '#003ecc';
+    $variables['html_attributes']->setAttribute('style', "--color-primary-highlight:$highlight_color_hex;");
+}

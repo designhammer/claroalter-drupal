@@ -1,0 +1,13 @@
+global-styling:
+  version: VERSION
+  css:
+    theme:
+      css/style.css: {}
+      css/toolbar.css: {}
+
+claroalter-styling:
+  version: VERSION
+  css:
+    theme:
+      https://cdn.jsdelivr.net/gh/designhammer/claroalter-drupal/claroalter/css/style.css: { type: external, crossorigin: anonymous, minified: true }
+      https://cdn.jsdelivr.net/gh/designhammer/claroalter-drupal/claroalter/css/toolbar.css: { type: external, crossorigin: anonymous, minified: true }
