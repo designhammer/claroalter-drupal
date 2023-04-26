@@ -1,3 +1,2 @@
 *.DS_Store
-claroalter-drupal.code-workspace
-claroalter_bulid/node_modules
+*node_modules
