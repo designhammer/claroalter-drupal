@@ -1,28 +1,16 @@
 # Claro Alter - Theme
 
-<img src="claroalter/screenshot.png" width="335" height="250">
+<img src="resources/readme-banner.png" width="100%" height="auto" alt="Claro Alter banner">
 
 Claro Alter provides enhancements to the core Claro admin theme.
 
 ---
 
-## CDN - jsDeliver for CSS
+## Theme Styles
 
-TODO - explan why...
+The Claro Alter theme is using the [jsDelivr CDN](https://www.jsdelivr.com/?docs=gh) to deliver the latest styling updates from this Github repo. To override styles per-project, uncomment this line `claroalter/claroalter-overrides`, in file `claroalter.libraries.yml`
 
-- [Main CSS](https://cdn.jsdelivr.net/gh/designhammer/claroalter-drupal@0.0.1/claro_alter/css/style.css)
-- [Toolbar CSS](https://cdn.jsdelivr.net/gh/designhammer/claroalter-drupal@0.0.1/claro_alter/css/toolbar.css)
 
-Usage
+## Highlight Color
 
-```yaml
-# claro_alter.libraries.yml
-
-global-styling:
-  version: VERSION
-  css:
-    theme:
-      https://cdn.jsdelivr.net/gh/designhammer/claroalter-drupal/claro_alter/css/style.css: { type: external, crossorigin: anonymous, minified: true }
-      https://cdn.jsdelivr.net/gh/designhammer/claroalter-drupal/claro_alter/css/toolbar.css: { type: external, crossorigin: anonymous, minified: true }
-
-```
+To change the themes primary highlight color (used for links, buttons, etc.), go to the admin menu `Appearance > Settings > Claro Alter` and enter a HEX value (e.g. #abc123) in the Primary Highlight Color field under the **Primary Highlight Color Settings**.

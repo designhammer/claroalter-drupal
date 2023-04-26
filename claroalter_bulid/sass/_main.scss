@@ -31,17 +31,38 @@
 
 .region-highlighted,
 .help,
-#block-claro-alter-primary-admin-actions,
-#block-claro-alter-secondary-local-tasks {
+#block-claroalter-primary-admin-actions,
+#block-claroalter-secondary-local-tasks {
   padding-right: 3rem;
   padding-left: 3rem;
 }
 
-#block-claro-alter-content {
+#block-claroalter-content {
   background-color: #fff;
   box-shadow: inset 0 1px 0 0 rgba(0, 0, 0, 10%);
   margin-top: 2rem;
-  padding: 1rem 3rem 4rem;
+  padding: 1rem 3rem 3rem;
+}
+
+.region-content-bottom {
+  background-color: #fff;
+  padding: 1px 3rem 4rem;
+
+  .navigation .menu {
+    box-shadow: inset 0 1px 0 0 rgba(0, 0, 0, 10%);
+    list-style: none;
+    margin-left: 0;
+    padding-top: 8px;
+
+    .menu-item {
+      display: inline;
+      padding-right: 10px;
+    }
+  }
+
+  .navigation:nth-child(1) .menu {
+    padding-top: 32px;
+  }
 }
 
 // ! nav
@@ -156,7 +177,7 @@ th {
 
 // ! misc
 
-// #edit-claro-alter-color-scheme {
+// #edit-claroalter-color-scheme {
 
 //   .form-item--color {
 
