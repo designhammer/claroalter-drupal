@@ -9,7 +9,7 @@ dependencies:
     - claroalter
 id: claroalter_main_menu
 theme: claroalter
-region: content
+region: content_bottom
 weight: -2
 provider: null
 plugin: 'system_menu_block:main'
