@@ -2,8 +2,8 @@ claroalter-styling:
   version: VERSION
   css:
     theme:
-      https://cdn.jsdelivr.net/gh/designhammer/claroalter-drupal/claroalter/css/style.css: { type: external, crossorigin: anonymous, minified: true }
-      https://cdn.jsdelivr.net/gh/designhammer/claroalter-drupal/claroalter/css/toolbar.css: { type: external, crossorigin: anonymous, minified: true }
+      https://cdn.jsdelivr.net/gh/designhammer/claroalter-drupal/claroalter_build/css/style.css: { type: external, crossorigin: anonymous, minified: true }
+      https://cdn.jsdelivr.net/gh/designhammer/claroalter-drupal/claroalter_build/css/toolbar.css: { type: external, crossorigin: anonymous, minified: true }
 
 claroalter-overrides:
   version: VERSION

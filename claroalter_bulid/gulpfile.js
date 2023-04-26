@@ -50,7 +50,7 @@ function styles (done) {
   gulp.src(path.styles.src)
     .pipe(sourceMaps.init())
     .pipe(sass({
-      outputStyle: 'expanded'
+      outputStyle: 'compressed'
     }).on('error', function (err) {
       console.log(err.toString())
       browserSync.notify(bsMessage.sassError, bsMessage.errorTime)
