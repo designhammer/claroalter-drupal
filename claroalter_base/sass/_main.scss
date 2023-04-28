@@ -5,11 +5,13 @@
   --color-bgblue-hover: #f9f9f9;
   --color-blue: #003ecc;
   --color-blue-dark: #0036b1;
+  --color-primary-highlight: var(--color-blue);
   --color-absolutezero: var(--color-primary-highlight);
   --color-absolutezero-hover: var(--color-primary-highlight);
   --color-absolutezero-active: var(--color-primary-highlight);
 }
 
+// ! regions
 .page-wrapper {
   background-color: var(--color-gray-050);
 
@@ -64,9 +66,23 @@
   }
 }
 
-// ! nav
+.layout-region--node-main .layout-region__content,
+.layout-region--node-footer .layout-region__content {
+  max-width: unset;
+}
 
-.is-horizontal .tabs::after {
+// ! nav
+// .is-horizontal .tabs::after {
+//   content: "";
+//   border-bottom: 1px solid #ddd;
+//   display: block;
+//   position: absolute;
+//   bottom: 0;
+//   left: 0;
+//   width: 100%;
+// }
+
+.tabs.tabs--secondary::after {
   content: "";
   border-bottom: 1px solid #ddd;
   display: block;
@@ -74,10 +90,6 @@
   bottom: 0;
   left: 0;
   width: 100%;
-}
-
-.tabs.tabs--secondary::after {
-  content: none;
 }
 
 .views-tabs .action-list li,
@@ -106,14 +118,12 @@
 }
 
 // ! typography
-
 h1,
 h2 {
   font-weight: 500;
 }
 
 // ! buttons
-
 .dropbutton-wrapper {
   box-shadow: none;
 }
@@ -138,13 +148,12 @@ h2 {
   }
 }
 
-// forms
+// ! forms
 .form-select.form-element--type-select.form-element--extrasmall {
   padding: 8px 10px;
 }
 
 // ! tables
-
 tr {
   border-bottom-color: #eee;
 
@@ -175,29 +184,7 @@ th {
   }
 }
 
-// ! misc
-
-// #edit-claroalter-color-scheme {
-
-//   .form-item--color {
-
-//     label {
-//       position: relative;
-
-//       &::after {
-//         content: "";
-//         background-color: var(--color-primary-highlight);
-//         display: block;
-//         position: absolute;
-//         top: 23px;
-//         left: 132px;
-//         width: 46px;
-//         height: 46px;
-//       }
-//     }
-//   }
-// }
-
+// ! details
 .claro-details__summary.claro-details__summary--package-listing {
   box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 7.5%);
 }
