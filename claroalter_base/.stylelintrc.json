@@ -1,12 +1,12 @@
 {
-  "extends": "stylelint-config-standard-scss",
+  "extends": "stylelint-config-sass-guidelines",
   "plugins": [
     "stylelint-order"
   ],
   "rules": {
-    "color-function-notation": "legacy",
     "color-hex-length": null,
     "declaration-block-no-duplicate-properties": true,
+    "declaration-block-no-shorthand-property-overrides": true,
     "declaration-colon-space-after": "always-single-line",
     "function-max-empty-lines": 1,
     "indentation": 2,
@@ -17,7 +17,9 @@
     "rule-empty-line-before": [
       "always-multi-line",
       {
-        "ignore": ["after-comment"]
+        "ignore": [
+          "after-comment"
+        ]
       }
     ],
     "scss/dollar-variable-pattern": null,

@@ -11,6 +11,12 @@
   --color-absolutezero-active: var(--color-primary-highlight);
 }
 
+a:focus,
+.claro-details__summary::after {
+  outline: 0 !important;
+  box-shadow: none !important;
+}
+
 // ! regions
 .page-wrapper {
   background-color: var(--color-gray-050);
@@ -64,6 +70,11 @@
   .navigation:nth-child(1) .menu {
     padding-top: 32px;
   }
+}
+
+.layout-region--node-main,
+.layout-region--node-footer {
+  width: 100%;
 }
 
 .layout-region--node-main .layout-region__content,
@@ -121,6 +132,10 @@
 h1,
 h2 {
   font-weight: 500;
+}
+
+h1.page-title {
+  font-size: 30px;
 }
 
 // ! buttons

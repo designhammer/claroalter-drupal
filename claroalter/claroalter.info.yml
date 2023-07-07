@@ -4,7 +4,7 @@ base theme: claro
 description: 'DesignHammer Admin Theme Enhancements'
 core_version_requirement: ^9 || ^10
 
-version: '0.1.0'
+version: '0.1.2'
 
 libraries:
   - claro/global-styling

@@ -4,7 +4,6 @@ const autoprefixer = require('autoprefixer')
 const browserSync = require('browser-sync').create()
 const postcss = require('gulp-postcss')
 const sass = require('gulp-sass')(require('sass'))
-const sourceMaps = require('gulp-sourcemaps')
 const uglify = require('gulp-uglify')
 
 // paths
@@ -47,8 +46,7 @@ const bsMessage = {
 // Scss : expanded, compressed
 function styles (done) {
   let isSuccess = true
-  gulp.src(path.styles.src)
-    .pipe(sourceMaps.init())
+  gulp.src(path.styles.src, { sourcemaps: true })
     .pipe(sass({
       outputStyle: 'compressed'
     }).on('error', function (err) {
@@ -58,8 +56,7 @@ function styles (done) {
       this.emit('end')
     }))
     .pipe(postcss([autoprefixer()]))
-    .pipe(sourceMaps.write('./'))
-    .pipe(gulp.dest(path.styles.dest))
+    .pipe(gulp.dest(path.styles.dest, { sourcemaps: '.' }))
     .on('end', function () {
       if (isSuccess) {
         browserSync.notify(bsMessage.sassComplete, bsMessage.successTime)
@@ -73,8 +70,7 @@ function styles (done) {
 // Minify JS
 function scripts (done) {
   let isSuccess = true
-  gulp.src(path.scripts.src)
-    .pipe(sourceMaps.init())
+  gulp.src(path.scripts.src, { sourcemaps: true })
     .pipe(uglify({
       mangle: false
     }))
@@ -84,8 +80,7 @@ function scripts (done) {
       isSuccess = false
       this.emit('end')
     })
-    .pipe(sourceMaps.write('./'))
-    .pipe(gulp.dest(path.scripts.dest))
+    .pipe(gulp.dest(path.scripts.dest, { sourcemaps: '.' }))
     .on('end', function () {
       if (isSuccess) {
         browserSync.notify(bsMessage.jsComplete, bsMessage.successTime)
