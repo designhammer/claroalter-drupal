@@ -20,5 +20,5 @@ jobs:
     #  run: yarn install && npm run-script build
 
     - name: Deploy static site to S3 bucket
-      run: aws s3 sync ./claroalter_base/css/ s3://dh-drupal --delete
+      run: aws s3 sync ./claroalter_base/css/ s3://dh-drupal/claroalter/css --delete
       # --delete flag will remove any file in the s3 that are not on the "thefoldertodeploy" folder
