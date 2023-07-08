@@ -2,7 +2,7 @@ name: CI
 on:
   push:
     branches:
-      - master #here we choose to deploy only when a push is detected on the master branch
+      - main #here we choose to deploy only when a push is detected on the main branch
 jobs:
   build:
     runs-on: ubuntu-latest
