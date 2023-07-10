@@ -10,9 +10,12 @@ Version 0.1.2
 
 ## Theme Styles
 
-The Claro Alter theme is using the [jsDelivr CDN](https://www.jsdelivr.com/?docs=gh) to deliver the latest styling updates from this Github repo. To override styles per-project, uncomment this line `claroalter/claroalter-overrides`, in file `claroalter.libraries.yml`
+The Claro Alter theme is using the [jsDelivr CDN](https://www.jsdelivr.com/?docs=gh) to deliver the latest styling updates from this Github repo.
 
 _moving to S3 bucket_
+
+To override styles per-project, uncomment this line: `claroalter/claroalter-overrides`, in file `claroalter/claroalter.info.yml`
+
 
 
 ## Highlight Color
