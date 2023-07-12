@@ -168,13 +168,13 @@ button.button--danger {
   background-color: map.get($md-red, "400");
 }
 
-.button.button--small,
-.dropbutton__item:first-of-type > *,
-.dropbutton__toggle,
-.form-submit:not(.button--primary) {
-  border-style: none !important;
-  background-color: var(--color-absolutezero);
-}
+// .button.button--small,
+// .dropbutton__item:first-of-type > *,
+// .dropbutton__toggle,
+// .form-submit:not(.button--primary) {
+//   border-style: none !important;
+//   background-color: var(--color-absolutezero);
+// }
 
 .admin-item__link::before {
   background-image: url("data:image/svg+xml,%3csvg width='9' height='14' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1.71.314L.29 1.723l5.302 5.353L.289 12.43l1.422 1.408 6.697-6.762z' fill='%23424242'/%3e%3c/svg%3e");
