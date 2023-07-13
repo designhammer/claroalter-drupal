@@ -163,7 +163,7 @@ h1.page-title {
   }
 }
 
-button.button--danger {
+.button--danger {
   border-color: map.get($md-red, "500") !important;
   background-color: map.get($md-red, "400");
 }
