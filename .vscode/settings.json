@@ -1,0 +1,22 @@
+{
+  "files.trimTrailingWhitespace": true,
+  "eslint.workingDirectories": [
+    "claroalter_base"
+  ],
+  "stylelint.packageManager": "yarn",
+  "stylelint.configBasedir": "claroalter_base",
+  "stylelint.configFile": "claroalter_base/.stylelintrc.json",
+  "stylelint.snippet": [
+    "sass",
+    "scss"
+  ],
+  "stylelint.validate": [
+    "sass",
+    "scss"
+  ],
+  "phpsab.fixerEnable": true,
+  "phpsab.snifferEnable": true,
+  "phpsab.standard": "Drupal",
+  "phpsab.executablePathCS": "./vendor/bin/phpcs",
+  "phpsab.executablePathCBF": "./vendor/bin/phpcbf"
+}
