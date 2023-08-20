@@ -145,7 +145,7 @@ h1.page-title {
 
 .button--danger {
   border-color: #f44336 !important;
-  background-color: #ef5350;
+  background-color: #ef5350 !important;
 }
 
 .admin-item__link::before {

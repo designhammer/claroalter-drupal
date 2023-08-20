@@ -169,7 +169,7 @@ h1.page-title {
 
 .button--danger {
   border-color: $md-red-500 !important;
-  background-color: $md-red-400;
+  background-color: $md-red-400 !important;
 }
 
 .admin-item__link::before {
