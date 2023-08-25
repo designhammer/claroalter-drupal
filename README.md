@@ -10,9 +10,8 @@ Version 0.1.2
 
 ## Theme Styles
 
-The Claro Alter theme is using the [jsDelivr CDN](https://www.jsdelivr.com/?docs=gh) to deliver the latest styling updates from this Github repo.
+The Claro Alter theme is using AWS CloudFront to deliver the latest styling updates from this Github repo. This allows for updates to be applied to all installs of the theme.
 
-_moving to S3 bucket_
 
 To override styles per-project, uncomment this line: `claroalter/claroalter-overrides`, in file `claroalter/claroalter.info.yml`
 
