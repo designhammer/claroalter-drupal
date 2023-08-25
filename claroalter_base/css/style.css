@@ -136,6 +136,7 @@ h1.page-title {
 .dropbutton__item:first-of-type > *:hover,
 .dropbutton__toggle:hover,
 .form-submit:not(.button--primary):hover {
+  color: #232429;
   background-color: #f5f5f5;
 }
 
