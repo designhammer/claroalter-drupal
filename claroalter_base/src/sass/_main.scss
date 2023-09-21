@@ -34,7 +34,7 @@ a:focus,
   .layout-container {
     margin: 0 !important;
 
-    .progress {
+    .progress:not(#updateprogress) {
       padding: 0 3rem 2rem;
     }
   }
