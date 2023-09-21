@@ -9,30 +9,6 @@ const uglifyjs = require('uglify-js')
 
 const writeFile = util.promisify(fs.writeFile)
 
-function bsync () {
-  browserSync.init({
-    port: 3110,
-    proxy: 'local.drupal10.test',
-    open: false,
-    browser: 'google chrome',
-    ui: false,
-    ghostMode: false,
-    notify: true,
-    reloadOnRestart: true,
-    files: ['css/style.css', 'css/toolbar.css', 'js/min/script.js'],
-    snippetOptions: {
-      // Load Browsersync inject code before the closing body tag
-      // in-order to avoid issues with D10's admin toolbar.
-      rule: {
-        match: /<\/body>/i,
-        fn: function (snippet, match) {
-          return snippet + match
-        }
-      }
-    }
-  })
-}
-
 // paths
 const path = {
   styles: {
@@ -51,7 +27,29 @@ const path = {
   }
 }
 
-// ----------------------------------------------------------------------------
+function bsync () {
+  browserSync.init({
+    port: 3110,
+    proxy: 'local.drupal10.test',
+    open: false,
+    browser: 'google chrome',
+    ui: false,
+    ghostMode: false,
+    notify: true,
+    reloadOnRestart: true,
+    files: [path.styles.dest, path.toolbar.dest, path.scripts.dest],
+    snippetOptions: {
+      // Load Browsersync inject code before the closing body tag
+      // in-order to avoid issues with D10's admin toolbar.
+      rule: {
+        match: /<\/body>/i,
+        fn: function (snippet, match) {
+          return snippet + match
+        }
+      }
+    }
+  })
+}
 
 // Function to compile Sass to CSS
 function compileSass () {
@@ -83,6 +81,7 @@ async function buildCSS () {
   try {
     // Compile Sass to CSS
     const sassResult = compileSass()
+
     // create embeded sass sourcemap.
     const sassMap = JSON.stringify(sassResult.sourceMap)
     // convert soucres to relative paths.
@@ -118,8 +117,6 @@ async function buildCSS () {
   }
 }
 
-// ----------------------------------------------------------------------------
-
 // Function to compile Toolbar Sass to CSS
 function compileToolbarSass () {
   const result = sass.compile(path.toolbar.src, {
@@ -150,6 +147,7 @@ async function buildToolbarCSS () {
   try {
     // Compile Sass to CSS
     const sassResult = compileToolbarSass()
+
     // create embeded sass sourcemap.
     const sassMap = JSON.stringify(sassResult.sourceMap)
     // convert soucres to relative paths.
@@ -185,8 +183,6 @@ async function buildToolbarCSS () {
   }
 }
 
-// ----------------------------------------------------------------------------
-
 // Function to compress JavaScript
 function compressJS () {
   const jsCode = fs.readFileSync(path.scripts.src, 'utf8')
@@ -211,17 +207,26 @@ function minifyJS () {
     // Compress JavaScript using UglifyJS
     const jsResult = compressJS()
 
+    // Replace "sources" value with file name.
+    const jsResultMap = JSON.parse(jsResult.map)
+    const emptySourceValue = '0'
+    const fileSourceValue = '../' + path.scripts.srcFile
+    // Find the index of the old value in the sources array
+    const sourceIndex = jsResultMap.sources.indexOf(emptySourceValue)
+    // If the old value is found, replace it with the new value
+    if (sourceIndex !== -1) {
+      jsResultMap.sources[sourceIndex] = fileSourceValue
+    }
+
     // Write the compressed JavaScript and sourcemap to files
     writeFile(path.scripts.dest, jsResult.code)
-    writeFile(path.scripts.dest + '.map', jsResult.map)
+    writeFile(path.scripts.dest + '.map', JSON.stringify(jsResultMap))
 
     console.log('UglifyJS complete!')
   } catch (error) {
     console.error('UglifyJS error:', error)
   }
 }
-
-// ----------------------------------------------------------------------------
 
 // Run BrowserSync
 function watchFiles () {

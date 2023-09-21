@@ -33,6 +33,9 @@ a:focus,
 .page-wrapper .layout-container {
   margin: 0 !important;
 }
+.page-wrapper .layout-container .progress {
+  padding: 0 3rem 2rem;
+}
 
 .page-content {
   margin-bottom: 0;
