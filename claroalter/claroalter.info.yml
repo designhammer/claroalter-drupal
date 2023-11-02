@@ -4,12 +4,13 @@ base theme: claro
 description: 'DesignHammer Admin Theme Enhancements'
 core_version_requirement: ^9 || ^10
 
-version: '0.1.2'
+version: '0.1.3'
 
 libraries:
   - claro/global-styling
-  - claroalter/claroalter-styling
-# - claroalter/claroalter-overrides
+  - claroalter/claroalter-main
+  # - claroalter/claroalter-style
+  # - claroalter/claroalter-script
 
 # Regions
 regions:

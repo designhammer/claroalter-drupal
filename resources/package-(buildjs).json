@@ -1,0 +1,32 @@
+{
+  "name": "claroalter",
+  "version": "0.1.0",
+  "description": "DesignHammer Admin Theme Enhancements",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/designhammer/claroalter-drupal"
+  },
+  "author": "DesignHammer, LLC",
+  "license": "GPL-2.0 AND MIT",
+  "homepage": "https://designhammer.com",
+  "scripts": {
+    "style": "node -e \"require('./build').buildCSS()\"",
+    "toolbar": "node -e \"require('./build').buildToolbarCSS()\"",
+    "script": "node -e \"require('./build').minifyJS()\"",
+    "watch": "node -e \"require('./build').watchFiles()\""
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.15",
+    "browser-sync": "^2.29.3",
+    "postcss": "^8.4.28",
+    "sass": "^1.66.1",
+    "sass-migrator": "^1.7.3",
+    "standard": "^17.1.0",
+    "stylelint": "^15.10.3",
+    "stylelint-config-sass-guidelines": "^10.0.0",
+    "stylelint-order": "^6.0.3",
+    "uglify-js": "^3.17.4",
+    "util": "^0.12.5",
+    "yarn-upgrade-all": "^0.7.2"
+  }
+}

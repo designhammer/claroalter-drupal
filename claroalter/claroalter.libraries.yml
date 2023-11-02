@@ -1,12 +1,21 @@
-claroalter-styling:
+claroalter-main:
   version: VERSION
   css:
     theme:
       https://d2l93ubdpzcjcv.cloudfront.net/claroalter/css/style.css: { type: external, minified: true, attributes: { crossorigin: anonymous } }
       https://d2l93ubdpzcjcv.cloudfront.net/claroalter/css/toolbar.css: { type: external, minified: true, attributes: { crossorigin: anonymous } }
 
-claroalter-overrides:
+claroalter-style:
   version: VERSION
   css:
     theme:
-      css/claroalter-override.css: {}
+      css/style-overrides.css: {}
+
+claroalter-script:
+  version: VERSION
+  js:
+    js/script-overrides.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/once
