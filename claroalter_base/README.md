@@ -3,10 +3,8 @@
 Install the following node modules (npm), in the same directory as this readme file, for compiling and linting our code.
 
 ```bash
-yarn add autoprefixer browser-sync postcss sass sass-migrator standard stylelint stylelint-config-sass-guidelines stylelint-order uglify-js util yarn-upgrade-all --dev
+bun add -D autoprefixer browser-sync concurrently nodemon postcss postcss-cli sass standard stylelint stylelint-config-sass-guidelines stylelint-order uglify-js
 ```
-
-To run sass-migrator on a file, run the following command `yarn sass-migrator module --verbose src/sass/DIR/FILE.scss`
 
 ---
 

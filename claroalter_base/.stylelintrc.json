@@ -7,12 +7,7 @@
     "color-hex-length": null,
     "declaration-block-no-duplicate-properties": true,
     "declaration-block-no-shorthand-property-overrides": true,
-    "declaration-colon-space-after": "always-single-line",
-    "function-max-empty-lines": 1,
-    "indentation": 2,
     "max-nesting-depth": 8,
-    "number-leading-zero": "always",
-    "number-no-trailing-zeros": null,
     "property-no-vendor-prefix": null,
     "rule-empty-line-before": [
       "always-multi-line",
@@ -28,8 +23,6 @@
     "selector-max-id": null,
     "selector-no-qualifying-type": null,
     "shorthand-property-no-redundant-values": true,
-    "string-quotes": "double",
-    "value-list-comma-space-after": "always-single-line",
     "order/properties-alphabetical-order": null,
     "order/order": [
       "custom-properties",

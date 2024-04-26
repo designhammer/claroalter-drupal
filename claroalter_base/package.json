@@ -11,22 +11,14 @@
   "homepage": "https://designhammer.com",
   "scripts": {
     "serve": "browser-sync start --config './bsync-config.js'",
-
-    "styles": "sass --style=expanded --error-css --source-map ./src/sass/style.scss ./css/style.css",
-    "postcss": "postcss ./css/style.css --use autoprefixer --no-map --replace",
-    "styles:toolbar": "sass --style=expanded --error-css --source-map ./src/sass/toolbar.scss ./css/toolbar.css",
-    "postcss:toolbar": "postcss ./css/toolbar.css --use autoprefixer --no-map --replace",
-    "scripts": "mkdir -p ./js && uglifyjs ./src/js/script.js --source-map --compress --output ./js/script.js",
-
-    "build:styles": "yarn styles && yarn postcss",
-    "build": "yarn build:styles && yarn scripts",
-
-    "styles:onchange": "nodemon --watch ./src/sass/ --ext scss --exec 'yarn styles' --quiet",
-    "scripts:onchange": "nodemon --watch ./src/js/ --ext js --exec 'yarn scripts' --quiet",
-
-    "watch:styles": "concurrently --raw --kill-others 'yarn serve' 'yarn styles:onchange'",
-    "watch:scripts": "concurrently --raw --kill-others 'yarn serve' 'yarn scripts:onchange'",
-    "watch": "concurrently --raw --kill-others 'yarn serve' 'yarn styles:onchange' 'yarn scripts:onchange'"
+    "style": "sass --style=expanded --error-css --source-map ./src/sass/style.scss:./css/style.css ./src/sass/toolbar.scss:./css/toolbar.css",
+    "postcss": "postcss ./css/**.css --use autoprefixer --no-map --replace",
+    "script": "uglifyjs ./src/js/script.js --source-map --compress --output ./js/script.js",
+    "build:style": "bun style && bun postcss",
+    "build": "bun build:style && bun script",
+    "onchange:style": "nodemon --watch ./src/sass/ --ext scss --exec 'bun build:style' --quiet",
+    "onchange:script": "nodemon --watch ./src/js/ --ext js --exec 'bun script' --quiet",
+    "watch": "concurrently --raw --kill-others 'bun serve' 'bun onchange:style' 'bun onchange:script'"
   },
   "browserslist": [
     "> 0.2%",
@@ -35,19 +27,17 @@
     "not dead"
   ],
   "devDependencies": {
-    "autoprefixer": "^10.4.16",
-    "browser-sync": "^2.29.3",
+    "autoprefixer": "^10.4.19",
+    "browser-sync": "^3.0.2",
     "concurrently": "^8.2.2",
-    "nodemon": "^3.0.1",
-    "postcss": "^8.4.31",
-    "sass": "^1.69.5",
-    "sass-migrator": "^1.7.3",
+    "nodemon": "^3.1.0",
+    "postcss": "^8.4.38",
+    "postcss-cli": "^11.0.0",
+    "sass": "^1.75.0",
     "standard": "^17.1.0",
-    "stylelint": "^15.11.0",
-    "stylelint-config-sass-guidelines": "^10.0.0",
-    "stylelint-order": "^6.0.3",
-    "uglify-js": "^3.17.4",
-    "util": "^0.12.5",
-    "yarn-upgrade-all": "^0.7.2"
+    "stylelint": "^16.4.0",
+    "stylelint-config-sass-guidelines": "^11.1.0",
+    "stylelint-order": "^6.0.4",
+    "uglify-js": "^3.17.4"
   }
 }

@@ -122,13 +122,9 @@
   height: 26px;
   min-height: 26px;
 }
-#admin-toolbar-search-input::-webkit-input-placeholder {
-  color: rgba(255, 255, 255, 0.5);
-}
 #admin-toolbar-search-input::-moz-placeholder {
   color: rgba(255, 255, 255, 0.5);
 }
 #admin-toolbar-search-input::placeholder {
   color: rgba(255, 255, 255, 0.5);
 }
-/*# sourceMappingURL=toolbar.css.map */
