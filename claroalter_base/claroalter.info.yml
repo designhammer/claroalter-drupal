@@ -1,10 +1,10 @@
-name: Claro Alter
+name: Claro Alter (Base)
 type: theme
 base theme: claro
 description: 'DesignHammer Admin Theme Enhancements'
 core_version_requirement: ^9 || ^10
 
-version: '0.1.2'
+version: '0.1.4'
 
 libraries:
   - claro/global-styling

@@ -38,6 +38,16 @@ a:focus,
   padding-top: 32px;
 }
 
+.layout-region--node-main,
+.layout-region--node-footer {
+  width: 100%;
+}
+
+.layout-region--node-main .layout-region__content,
+.layout-region--node-footer .layout-region__content {
+  max-width: unset;
+}
+
 .views-tabs .action-list li,
 .views-tabs .views-tabs__action-list-button.form-submit,
 .views-tabs a {
